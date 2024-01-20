@@ -8,7 +8,7 @@
 
 body {
     min-height: 100vh;
-    background: url('background.jpg') no-repeat;
+    background: url('background_1.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -19,27 +19,32 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    /* background: transparent; */
-    background: rgba(245, 245, 220, 0.491);
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.logo {
-    font-family: 'Cabin', sans-serif;
+.logo img{
+    max-height: 70%;
+    max-width: 70%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    top: 0px;
+    /* font-family: 'Cabin', sans-serif;
     font-size: 32px;
     color: black;
     text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 1mm;
+    font-weight: 400;
+    letter-spacing: 1mm; */
 }
 
 .navbar a {
     position: relative;
     font-size: 18px;
-    color:grey;
+    color:rgb(255, 255, 255);
     font-weight: 500;
     text-decoration: none;
     margin-left: 40px;
@@ -84,4 +89,52 @@ body {
     color: orange;
     font-weight: 400;
     font-size: 30px;
+}
+
+.content p{
+    font-family: 'Cabin', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 18px;
+
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid darkorange;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+span {
+    background: darkorange;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
 }
