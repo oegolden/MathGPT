@@ -31,8 +31,9 @@ body {
     max-width: 70%;
     position: absolute;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 0;
     top: 0px;
+    left: 50px;
     /* font-family: 'Cabin', sans-serif;
     font-size: 32px;
     color: black;
@@ -137,4 +138,12 @@ button:hover span{
 
 button:hover{
     border: none;
+}
+
+.content1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align:left ;
 }
