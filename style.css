@@ -141,9 +141,43 @@ button:hover{
 }
 
 .content1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    max-width: 400px;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align:left ;
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+input {
+    width: 325px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid darkorange;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-control{
+    font-family: 'Cabin', sans-serif;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.btn-info {
+    font-family: 'Cabin', sans-serif;
+    font-size: 15px;
 }
