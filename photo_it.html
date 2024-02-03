@@ -6,6 +6,7 @@
     initial-scale=1.0">
     <title>mathGPT</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,17 +23,11 @@
     <div class="content1">
         <div class="container">
             <div class="row">
-                <p>
-                    % with messages = get_flashed_messages() %
-                        % if messages %
-                            <ul>
-                                % for message in messages %
-                                <li>{{ message }}</li>
-                                % endfor %
-                            </ul>
-                        % endfor %
-                    % endwith %        
-                </p>
+                <if filename>
+                    <div>
+                        <img src="{{ url_for('display_image', filename=filename) }}">
+                    </div>
+                </if>
                 <form method="post" action="/" enctype="multipart/form-data">
                     <dl>
                         <p>
@@ -50,3 +45,4 @@
 
 
 </body>
+</html>

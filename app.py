@@ -5,6 +5,7 @@ import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+
 UPLOAD_FOLDER = '/Users/sayemanadira/Documents/GitHub/MathGPT/uploads'
 
 
@@ -36,6 +37,14 @@ def upload_image():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         flash('Image successfully uploaded and displayed below')
         return render_template('photo_it.html', filename=filename)
+    else:
+        flash('Allowed image types are - png, jpg, jpeg, gif')
+        return redirect(request.url)
+    
+@app.route('/display/<filename>')
+def display_image(filename):
+    #print('display_image filename: ' + filename)
+    return redirect(url_for('Users', filename='uploads/' + filename), code=301)
 
 
 if __name__ == "__main__":
