@@ -1,8 +1,9 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
+
 from flask_uploads import UploadSet, IMAGES, configure_uploads
 from flask_wtf import FlaskForm
-from flast_wtf.file import FileField, FileRequired, FileAllowed
+from flask_wtf.file import FileField, FileRequired, FileAllowed
 from wtforms import SubmitField
 
 app = Flask(__name__)
@@ -21,9 +22,16 @@ class UploadForm(FlaskForm):
     )
     submit = SubmitField('Upload')
 
+@app.route('/uploads/<filename>')
+def get_file(filename):
+    return send_from_directory(app.config['UPLOADED_PHOTOS_DEST'],filename)
+
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_image():
+    form = UploadForm()
+    if form.validate_on_submit():
+        filename = photos.save(form.photo.data)
     return render_template('photo_it.html')
 
 
