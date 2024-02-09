@@ -7,6 +7,7 @@
     <p>Take a picture and let us do the work:</p>
 </section> -->
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,12 +15,12 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <title>mathGPT</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
     <header class="header">
-        <a href="mathGPT.html" class="logo"><img src="logo.png"></a>
+        <a href="mathGPT.html" class="logo"><img src="{{ url_for('static', filename='logo.png') }}"></a>
 
         <nav class="navbar">
             <a href="mathGPT.html">Home</a>
