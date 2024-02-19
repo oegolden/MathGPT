@@ -30,14 +30,17 @@ def home():
 def math():
     return redirect(url_for("home"))
 
-@app.route('/photo_it')
+@app.route('/photoit.html')
 def photo_it():
-    return render_template('photo_it.html')
+    return render_template('photoit.html')
 
-@app.route('/photo_it.html')
-def photo_html():
-    return redirect("photo_it")
+@app.route('/typeit.html')
+def type():
+    return render_template('typeit.html')
 
+@app.route('/about.html')
+def about():
+    return render_template('about.html')
 
 
 # @app.route('/uploads/<filename>')
