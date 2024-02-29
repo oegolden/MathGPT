@@ -37,6 +37,7 @@ def photo():
 
 @app.route('/', methods=['POST'])
 def upload_image():
+    request.url = '/photoit.html'
     if 'file' not in request.files:
         flash('No file part')
         return redirect(request.url)

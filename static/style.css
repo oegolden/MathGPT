@@ -149,6 +149,7 @@ button:hover{
 }
 
 .container {
+    align-items: center;
     max-width: 400px;
     width: 100%;
     background: white;
@@ -171,6 +172,14 @@ input {
     overflow: hidden;
 }
 
+input:hover::before{
+    width: 100%;
+}
+
+input:hover {
+    color: darkorange;
+}
+
 .form-control{
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
@@ -180,4 +189,15 @@ input {
 .btn-info {
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
+}
+
+.row li{
+    color: red;
+    text-align: center;
+    font-size: 12px;
+}
+
+.row h2{
+    font-size: 20px;
+    text-align: center;
 }

@@ -22,39 +22,42 @@
             <a href="about.html">About</a>
         </nav>
     </header>
-    <div class="container">
-        <div class="row">
-            <h2>Select a file to upload</h2>
-            <p>
-                {% with messages = get_flashed_messages() %}
-                  {% if messages %}
-                    <ul>
-                    {% for message in messages %}
-                      <li>{{ message }}</li>
-                    {% endfor %}
-                    </ul>
-                  {% endif %}
-                {% endwith %}
-            </p>
-            {% if filename %}
-                <div>
-                    <img src="{{ url_for('display_image', filename=filename) }}"
-                    width=200px
-                    height= auto>
-                </div>
-            {% endif %}
-            <form method="post" action="/" enctype="multipart/form-data">
-                <dl>
-                    <p>
-                        <input type="file" name="file" class="form-control" autocomplete="off" required>
-                    </p>
-                </dl>
+    <div class="content1">
+        <div class="container">
+            <div class="row">
+                <h2>Select a file to upload</h2>
                 <p>
-                    <input type="submit" value="Submit" class="btn btn-info">
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        <ul>
+                        {% for message in messages %}
+                          <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
                 </p>
-            </form>
-        </div>
-        </div>
+                {% if filename %}
+                    <div>
+                        <a class="display"><img src="{{ url_for('display_image', filename=filename) }}"
+                        width=200px
+                        height= auto
+                        ></a>
+                    </div>
+                {% endif %}
+                <form method="post" action="/" enctype="multipart/form-data">
+                    <dl>
+                        <p>
+                            <input type="file" name="file" class="form-control" autocomplete="off" required>
+                        </p>
+                    </dl>
+                    <p>
+                        <input type="submit" value="Submit" class="btn btn-info">
+                    </p>
+                </form>
+            </div>
+            </div>
+    </div>
     
 </body>
 </html>
