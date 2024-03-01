@@ -22,10 +22,21 @@
             <a href="about.html">About</a>
         </nav>
     </header>
+    <div class="content2">
+        <h1>What pictures can we accept?</h1>
+        <img src="{{ url_for('static', filename='IMG_1305.jpg') }}"
+        width=200px
+        height=auto
+        class="instructions">
+        <h3>Here is an example of what our model can or cannot read. 
+            Make sure your picture is centered and clear. We will not read correctly if: </h3>
+        <li>Handwriting is too small</li>
+        <li>Numbers and operations are not clearly spaced</li>  
+    </div>
     <div class="content1">
         <div class="container">
             <div class="row">
-                <h2>Select a file to upload</h2>
+                <h2>Select a photo to upload</h2>
                 <p>
                     {% with messages = get_flashed_messages() %}
                       {% if messages %}

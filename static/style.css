@@ -184,6 +184,7 @@ input:hover {
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
     padding-bottom: 10px;
+    padding-left: 50px;
 }
 
 .btn-info {
@@ -201,3 +202,30 @@ input:hover {
     font-size: 20px;
     text-align: center;
 }
+
+
+.content2 {
+    padding-top: 50px;
+    margin: 30px;
+}
+.content2 h1{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.content2 h3{
+    font-size: 15px;
+    text-align: justify;
+}
+
+.content2 li{
+    font-size: 15px;
+    text-align: justify;
+}
+
+.instructions {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+  }
